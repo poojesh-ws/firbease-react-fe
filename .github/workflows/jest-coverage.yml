@@ -2,9 +2,7 @@ name: Jest Coverage Report with Annotations (CI)
 on:
   pull_request:
     branches:
-      - master
-      - qa
-      - develop
+      - no-branch
 jobs:
   coverage_report:
     name: Jest Coverage Report
