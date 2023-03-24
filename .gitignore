@@ -1,20 +1,24 @@
 # Don't check auto-generated stuff into git
+#------------------------root----------------#
 .history/
 /web/build
 /node_modules
-/web/stats.json
-/web/coverage/
 .vscode/
-/web/switcher_backup.env
-/web/yarn-error.log
-/web/storybook-static
-/web/reports/
 # Cruft
 .DS_Store
 /web/npm-debug.log
 .idea
 .tsconfig-lint.json
 
+
+#-----------------web ------------------#
+/web/node_modules
+/web/stats.json
+/web/coverage/
+/web/switcher_backup.env
+/web/yarn-error.log
+/web/storybook-static
+/web/reports/
 
 #----------------- functions ---------------#
 /functions/lib/**/*.js
@@ -25,3 +29,5 @@
 
 # Node.js dependency directory
 /functions/node_modules/
+
+/functions/*.log

@@ -1,5 +1,6 @@
 {
   "name": "functions",
+  "version": "1.0.0",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
     "build": "tsc",
@@ -11,6 +12,7 @@
     "logs": "firebase functions:log"
   },
   "engines": {
+    "npm": ">=5",
     "node": "16"
   },
   "main": "lib/index.js",
