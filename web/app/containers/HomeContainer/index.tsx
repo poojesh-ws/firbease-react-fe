@@ -151,6 +151,7 @@ export function HomeContainer({ dispatchLaunchList, loading, launchData, intl, l
         </ButtonBox>
       </CustomHeader>
       <LaunchList launchData={launchData} loading={loading} />
+      <br />
       <ErrorHandler loading={loading} launchListError={launchListError} />
       <CustomFooter>
         <Button data-testid="prev-btn" type="primary" onClick={handlePrev} disabled={loading || !hasPrevPage}>
