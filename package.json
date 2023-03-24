@@ -1,18 +1,29 @@
 {
   "name": "react-firebase-monorepo",
   "description": "A React firebase monorepo setup poc",
+  "version": "1.0.0",
   "engines": {
     "npm": ">=5",
     "node": ">=8.15.1"
   },
+  "private": "true",
   "scripts": {
     "start:web": "cd web && yarn start",
     "test:web": "cd web && yarn test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poojesh-ws/firbease-react-fe.git"
+  },
   "workspaces": [
-    "web"
+    "web",
+    "functions"
   ],
-  "dependencies": {
-    "concurrently": "4.1.0"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poojesh-ws/firbease-react-fe/issues"
+  },
+  "homepage": "https://github.com/poojesh-ws/firbease-react-fe#readme"
 }

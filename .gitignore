@@ -1,7 +1,7 @@
 # Don't check auto-generated stuff into git
 .history/
 /web/build
-/web/node_modules
+/node_modules
 /web/stats.json
 /web/coverage/
 .vscode/
@@ -14,3 +14,14 @@
 /web/npm-debug.log
 .idea
 .tsconfig-lint.json
+
+
+#----------------- functions ---------------#
+/functions/lib/**/*.js
+/functions/lib/**/*.js.map
+
+# TypeScript v1 declaration files
+/functions/typings/
+
+# Node.js dependency directory
+/functions/node_modules/
