@@ -1,16 +1,16 @@
 # Don't check auto-generated stuff into git
 .history/
-build
-node_modules
-stats.json
-coverage/
+/web/build
+/web/node_modules
+/web/stats.json
+/web/coverage/
 .vscode/
-switcher_backup.env
-yarn-error.log
-storybook-static
-reports/
+/web/switcher_backup.env
+/web/yarn-error.log
+/web/storybook-static
+/web/reports/
 # Cruft
 .DS_Store
-npm-debug.log
+/web/npm-debug.log
 .idea
 .tsconfig-lint.json
