@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/poojesh-ws/firbease-react-fe/issues"
   },
-  "homepage": "https://github.com/poojesh-ws/firbease-react-fe#readme"
+  "homepage": "https://github.com/poojesh-ws/firbease-react-fe#readme",
+  "dependencies": {
+    "pre-commit": "^1.2.2"
+  }
 }
