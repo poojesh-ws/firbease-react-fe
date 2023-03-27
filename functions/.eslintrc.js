@@ -1,7 +1,6 @@
 const prettierOptions = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'));
 
 module.exports = {
-  root: true,
   env: {
     es6: true,
     node: true
