@@ -19,7 +19,7 @@ export const getCurrentRouteDetails = (location: Partial<Location>) => {
 export const mapKeysDeep = <T>(obj: T, fn: (key: string) => string): T =>
   Array.isArray(obj)
     ? obj.map((val) => mapKeysDeep(val, fn))
-    : typeof obj === 'object'
+    : typeof obj === 'object' && obj !== null
     ? Object.keys(obj).reduce((acc, current) => {
         const key = fn(current);
         const val = obj[current as keyof T];

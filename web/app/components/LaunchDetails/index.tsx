@@ -74,10 +74,6 @@ const launchLabelStyles = () => css`
   font-weight: bold;
 `;
 
-const LaunchLabel = styled.b`
-  ${launchLabelStyles()}
-`;
-
 const LaunchLabelT = styled(T)`
   ${launchLabelStyles()}
 `;
@@ -88,10 +84,6 @@ const ShipContainer = styled.div`
   align-items: center;
   row-gap: 1rem;
 `;
-
-function labelRenderer(chunks: string) {
-  return <LaunchLabel>{chunks}</LaunchLabel>;
-}
 
 interface LaunchDetailsProps extends LaunchDetailsType {
   loading: boolean;
@@ -112,7 +104,7 @@ function LaunchDetails({ missionName, links, details, rocket, ships, loading }: 
           </If>
 
           <If condition={!isEmpty(details)}>
-            <CustomT data-testid="details" type="standard" id="details" values={{ details, b: labelRenderer }} />
+            <CustomT data-testid="details" type="standard" id="details" values={{ details }} />
           </If>
           <If condition={!isEmpty(rocket)}>
             <LaunchLabelT type="smallBoldText" id="rocket" />
@@ -122,7 +114,7 @@ function LaunchDetails({ missionName, links, details, rocket, ships, loading }: 
                   data-testid="rocket-name"
                   type="standard"
                   id="name_label"
-                  values={{ name: rocket?.rocketName, b: labelRenderer }}
+                  values={{ name: rocket?.rocketName }}
                 />
               </If>
               <If condition={!isEmpty(rocket?.rocketType)}>
@@ -130,7 +122,7 @@ function LaunchDetails({ missionName, links, details, rocket, ships, loading }: 
                   data-testid="rocket-type"
                   type="standard"
                   id="type_label"
-                  values={{ type: rocket?.rocketType, b: labelRenderer }}
+                  values={{ type: rocket?.rocketType }}
                 />
               </If>
             </RocketBox>
@@ -144,10 +136,10 @@ function LaunchDetails({ missionName, links, details, rocket, ships, loading }: 
                 renderItem={(ship) => (
                   <>
                     <If condition={!isEmpty(ship.name)}>
-                      <CustomT data-testid="ship-name" id="name_label" values={{ name: ship.name, b: labelRenderer }} />
+                      <CustomT data-testid="ship-name" id="name_label" values={{ name: ship.name }} />
                     </If>
                     <If condition={!isEmpty(ship.type)}>
-                      <CustomT data-testid="ship-type" id="type_label" values={{ type: ship.type, b: labelRenderer }} />
+                      <CustomT data-testid="ship-type" id="type_label" values={{ type: ship.type }} />
                     </If>
                   </>
                 )}

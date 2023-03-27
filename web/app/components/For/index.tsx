@@ -22,7 +22,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
 type ForProps<T> = {
   of?: T[];
   renderItem: (item: T, index: number) => React.ReactElement;
-  ParentComponent?: React.FC;
+  ParentComponent?: React.FC<PropsWithChildren>;
   noParent?: boolean;
 };
 

@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 const prettierOptions = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'));
 
 module.exports = {
@@ -28,6 +27,7 @@ module.exports = {
     curly: ['error', 'all'],
     'no-console': ['error', { allow: ['error'] }],
     'prettier/prettier': ['error', prettierOptions],
+    'react/jsx-uses-react': 1,
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-var-requires': 'off',
@@ -40,5 +40,10 @@ module.exports = {
     it: false,
     expect: false,
     describe: false
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 };
