@@ -10,7 +10,8 @@
   "scripts": {
     "start:web": "cd web && yarn start",
     "test:web": "cd web && yarn test",
-    "lint:eslint:web:fix": "cd web && yarn run lint:eslint:fix"
+    "lint:eslint:web:fix": "cd web && yarn run lint:eslint:fix",
+    "lint:staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
       "git add --force"
     ]
   },
+  "pre-commit": "lint:staged",
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -42,6 +44,7 @@
   },
   "homepage": "https://github.com/poojesh-ws/firbease-react-fe#readme",
   "dependencies": {
+    "lint-staged": "^13.2.0",
     "pre-commit": "^1.2.2"
   }
 }
