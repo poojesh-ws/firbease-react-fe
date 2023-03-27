@@ -4,7 +4,7 @@ exports[`<Header /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <header
-      class="ant-layout-header Header__StyledHeader-sc-1oujkb8-0 gUdnlM"
+      class="ant-layout-header Header__StyledHeader-sc-1oujkb8-0 gdLFJY"
       data-testid="header"
     >
       <a
@@ -12,12 +12,12 @@ exports[`<Header /> should render and match the snapshot 1`] = `
       >
         <img
           alt="logo"
-          class="Header__Logo-sc-1oujkb8-1 jCVyTI"
+          class="Header__Logo-sc-1oujkb8-1 dzqrPM"
           src="IMAGE_MOCK"
         />
       </a>
       <p
-        class="T__StyledText-znbtqz-0 gcpeYe Header__Title-sc-1oujkb8-2 fbBQMG"
+        class="T__StyledText-znbtqz-0 cfJtGW Header__Title-sc-1oujkb8-2 eIznJi"
         data-testid="t"
       >
         Wednesday Solutions
