@@ -10,8 +10,7 @@
   "scripts": {
     "start:web": "cd web && yarn start",
     "test:web": "cd web && yarn test",
-    "lint:eslint:web:fix": "cd web && yarn run lint:eslint:fix",
-    "lint:staged": "lint-staged"
+    "lint:staged": "cd web && yarn run lint:staged"
   },
   "repository": {
     "type": "git",
@@ -22,20 +21,6 @@
     "functions"
   ],
   "keywords": [],
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "npm run lint:eslint:web:fix",
-      "git add --force",
-      "jest --findRelatedTests $STAGED_FILES"
-    ],
-    "*.{ts,tsx}": [
-      "./internals/scripts/tsc-lint.sh"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add --force"
-    ]
-  },
   "pre-commit": "lint:staged",
   "author": "",
   "license": "ISC",
