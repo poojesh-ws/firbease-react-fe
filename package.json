@@ -9,7 +9,8 @@
   "private": "true",
   "scripts": {
     "start:web": "cd web && yarn start",
-    "test:web": "cd web && yarn test"
+    "test:web": "cd web && yarn test",
+    "lint:eslint:web:fix": "cd web && yarn run lint:eslint:fix"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,20 @@
     "functions"
   ],
   "keywords": [],
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "npm run lint:eslint:web:fix",
+      "git add --force",
+      "jest --findRelatedTests $STAGED_FILES"
+    ],
+    "*.{ts,tsx}": [
+      "./internals/scripts/tsc-lint.sh"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
