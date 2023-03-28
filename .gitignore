@@ -9,6 +9,7 @@
 /web/npm-debug.log
 .idea
 .tsconfig-lint.json
+*.log
 
 
 #-----------------web ------------------#
