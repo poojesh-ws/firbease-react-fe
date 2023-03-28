@@ -20,9 +20,8 @@ jobs:
           cache: "yarn"
 
       - name: Install firebase
-        run: |
-        npm init
-        npm install --save firebase
+      - run: npm init
+      - run: npm install --save firebase
 
       - name: Install dependencies
         run: yarn
