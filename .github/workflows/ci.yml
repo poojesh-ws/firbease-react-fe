@@ -1,7 +1,7 @@
 name: React Template CI
 on:
   pull_request:
-    branches: [random]
+    branches: [no-branch]
 jobs:
   build-and-test:
     name: Build & Test

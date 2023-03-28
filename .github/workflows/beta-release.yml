@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - random
+      - no-branch
 
 name: Create Beta Release
 
