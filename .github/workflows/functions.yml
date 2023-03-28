@@ -19,6 +19,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
 
+      - name: Install firebase
+        run:
+        npm init
+        npm install --save firebase
+        
       - name: Install dependencies
         run: yarn
 
