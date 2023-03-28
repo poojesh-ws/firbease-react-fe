@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> container tests should render and match the snapshot 1`] = `
+<div>
+  <header
+    class="ant-layout-header Header__StyledHeader-sc-1oujkb8-0 hMFhJA"
+    data-testid="header"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="logo"
+        class="Header__Logo-sc-1oujkb8-1 dzqrPM"
+        src="IMAGE_MOCK"
+      />
+    </a>
+    <p
+      class="T__StyledText-znbtqz-0 cfJtGW Header__Title-sc-1oujkb8-2 eIznJi"
+      data-testid="t"
+    >
+      Wednesday Solutions
+    </p>
+  </header>
+  <section
+    class="ant-layout App__CustomLayout-sc-1cjfzn6-0 cdIBtv"
+  >
+    <div
+      class="Siderbar__SidebarWrapper-sc-1qq6lqc-0 bTmLhd"
+    >
+      <div
+        class="Siderbar__SideBarStatic-sc-1qq6lqc-2 czyzkC"
+        data-testid="sidebar"
+      >
+        <a
+          aria-label="home link"
+          data-testid="rocket-home-link"
+          href="/"
+        >
+          <img
+            alt="rocket-icon"
+            class="Siderbar__RocketLogo-sc-1qq6lqc-3 kuBfzO"
+            src="IMAGE_MOCK"
+          />
+        </a>
+      </div>
+    </div>
+    <main
+      class="ant-layout-content"
+    />
+  </section>
+</div>
+`;

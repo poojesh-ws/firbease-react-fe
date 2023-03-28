@@ -24,7 +24,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          SOURCE_DIR: './build/'
+          SOURCE_DIR: "./build/"
 
       - name: Set branch name
         id: vars
@@ -38,8 +38,8 @@ jobs:
         with:
           author_name: Gitflow
           author_email: git@wednesday.is
-          message: 'Update badges'
-          add: 'badges/'
+          message: "Update badges"
+          add: "badges/"
           push: false
       - name: Git pull origin
         run: |
