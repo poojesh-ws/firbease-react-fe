@@ -1,7 +1,7 @@
 name: Deploy firebase functions
 on:
   push:
-    branches: [dev]
+    branches: [feat/mono-repo]
 
 jobs:
   build-and-deploy:
@@ -34,7 +34,7 @@ jobs:
         run: ls -R
 
       - name: Echo steps output path
-        run: echo ${{ steps.create-json.outputs.path }}
+        run: echo "${{ steps.create-json.outputs.path }}"
 
       - name: Set environment variable with path to credentials.json
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(echo "${{ steps.create-json.outputs.paths }}" | tr -d '\n')" >> $GITHUB_ENV
