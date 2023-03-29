@@ -2,10 +2,7 @@ name: Deploy firebase functions
 on:
   push:
     branches: [dev]
-
-env:
-  GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-
+    
 jobs:
   build-and-deploy:
     timeout-minutes: 30
@@ -23,6 +20,17 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
 
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@1.1.2
+        with:
+          name: "credentials.json"
+          json: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+
+      - name: Set environment variable with path to credentials.json
+        run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(echo "${{ steps.create-json.outputs.paths }}" | tr -d '\n')" >> $GITHUB_ENV
+      
+      - name: set 
       - name: Install dependencies
         run: yarn
 
