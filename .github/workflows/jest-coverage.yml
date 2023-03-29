@@ -16,11 +16,11 @@ jobs:
         id: threshold
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: "jest.config.json"
+          path: "./web/jest.config.json"
           prop_path: "coverageThreshold.global.statements"
 
       - name: Install dependencies
-        run: yarn
+        run: cd web && yarn
 
       - name: Test and generate coverage report
         uses: artiomtr/jest-coverage-report-action@v2.0-rc.4
@@ -29,4 +29,4 @@ jobs:
           threshold: ${{steps.threshold.outputs.prop}}
           package-manager: yarn
           custom-title: Jest Coverage Report
-          working-directory: ./web
+          working-directory: "./web"
