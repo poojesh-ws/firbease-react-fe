@@ -2,10 +2,7 @@ name: Deploy firebase functions
 on:
   push:
     branches: [dev]
-
-env:
-  GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-
+    
 jobs:
   build-and-deploy:
     timeout-minutes: 30
