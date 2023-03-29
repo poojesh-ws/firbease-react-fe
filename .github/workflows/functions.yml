@@ -1,7 +1,7 @@
 name: Deploy firebase functions
 on:
   push:
-    branches: [feat/mono-repo]
+    branches: [dev]
 
 jobs:
   build-and-deploy:
