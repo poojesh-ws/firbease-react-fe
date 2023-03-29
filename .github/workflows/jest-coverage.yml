@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
     steps:
       - uses: actions/checkout@v2
       - name: Get Threshold
@@ -20,7 +20,7 @@ jobs:
           prop_path: "coverageThreshold.global.statements"
 
       - name: Install dependencies
-        run: cd web && yarn
+        run: yarn
 
       - name: Test and generate coverage report
         uses: artiomtr/jest-coverage-report-action@v2.0-rc.4
