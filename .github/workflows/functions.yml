@@ -33,11 +33,8 @@ jobs:
       - name: List files in current directory
         run: ls -R
 
-      - name: Echo steps output path
-        run: echo $(readlink -f credentials.json)
-
       - name: Set environment variable with path to credentials.json
-        run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(echo "${{ steps.create-json.outputs.paths }}" | tr -d '\n')" >> $GITHUB_ENV
+        run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(readlink -f credentials.json)" >> $GITHUB_ENV
       
       - name: Install dependencies
         run: yarn
