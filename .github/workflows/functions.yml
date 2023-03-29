@@ -33,6 +33,9 @@ jobs:
       - name: List files in current directory
         run: ls -R
 
+      - name: Echo steps output path
+        run: echo ${{ steps.create-json.outputs.path }}
+
       - name: Set environment variable with path to credentials.json
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(echo "${{ steps.create-json.outputs.paths }}" | tr -d '\n')" >> $GITHUB_ENV
       
