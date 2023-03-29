@@ -2,7 +2,7 @@ name: Deploy firebase functions
 on:
   push:
     branches: [dev]
-    
+
 jobs:
   build-and-deploy:
     timeout-minutes: 30
@@ -30,7 +30,6 @@ jobs:
       - name: Set environment variable with path to credentials.json
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(echo "${{ steps.create-json.outputs.paths }}" | tr -d '\n')" >> $GITHUB_ENV
       
-      - name: set 
       - name: Install dependencies
         run: yarn
 
