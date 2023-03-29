@@ -2,21 +2,21 @@ name: Jest Coverage Report with Annotations (CI)
 on:
   pull_request:
     branches:
-      - no-branch
+      - dev
 jobs:
   coverage_report:
     name: Jest Coverage Report
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
       - name: Get Threshold
         id: threshold
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: "jest.config.json"
+          path: "./web/jest.config.json"
           prop_path: "coverageThreshold.global.statements"
 
       - name: Install dependencies
@@ -29,3 +29,4 @@ jobs:
           threshold: ${{steps.threshold.outputs.prop}}
           package-manager: yarn
           custom-title: Jest Coverage Report
+          working-directory: "./web"
