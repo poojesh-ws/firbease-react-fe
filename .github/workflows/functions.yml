@@ -1,4 +1,4 @@
-name: Deploy firebase functions
+name: Deploy firebase functions and firestore
 on:
   push:
     branches: [dev]
@@ -36,5 +36,8 @@ jobs:
       - name: Install firebase tools
         run: yarn global add firebase firebase-tools
 
-      - name: Build
+      - name: Deploy functions
         run: cd functions && yarn run deploy
+
+      - name: Deploy firestore rules and indexes
+        run: firebase deploy --only firestore
