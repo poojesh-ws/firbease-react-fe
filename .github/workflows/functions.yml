@@ -19,9 +19,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      
-      - name: List files in current directory
-        run: ls -R
 
       - name: create-json
         id: create-json
@@ -29,9 +26,6 @@ jobs:
         with:
           name: "credentials.json"
           json: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-     
-      - name: List files in current directory
-        run: ls -R
 
       - name: Set environment variable with path to credentials.json
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(readlink -f credentials.json)" >> $GITHUB_ENV
