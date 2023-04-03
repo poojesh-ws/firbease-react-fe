@@ -24,8 +24,7 @@ report.json
 /web/report.json
 
 #----------------- functions ---------------#
-/functions/lib/**/*.js
-/functions/lib/**/*.js.map
+/functions/lib/
 
 # TypeScript v1 declaration files
 /functions/typings/
