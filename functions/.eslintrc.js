@@ -17,11 +17,13 @@ module.exports = {
     sourceType: 'module',
   },
   ignorePatterns: [
-    '/lib/**/*', // Ignore built files.
+    '/lib/**/*',
+    '/dist/**/*', // Ignore built files.
   ],
   plugins: ['@typescript-eslint', 'import'],
   rules: {
     'import/no-unresolved': 0,
     'import/no-webpack-loader-syntax': 0,
+    '@typescript-eslint/no-var-requires': 0,
   },
 };
