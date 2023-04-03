@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LaundDetails> tests should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="ant-card ant-card-bordered LaunchDetails__LaunchDetailsCard-asn7bn-0 dGqgMX"
+      data-testid="launch-details"
+    >
+      <div
+        class="ant-card-body"
+      >
+        <img
+          class="LaunchDetails__CustomImage-asn7bn-1 fTbigA"
+          src="https://farm9.staticflickr.com/8617/16789019815_f99a165dc5_o.jpg"
+        />
+        <div
+          class="LaunchDetails__DetailsCard-asn7bn-2 itmkzE"
+        >
+          <p
+            class="T__StyledText-znbtqz-0 cJIIqm LaunchDetails__CustomT-asn7bn-4 eEceGX"
+            data-testid="mission-name"
+          >
+            CRS-21
+          </p>
+          <p
+            class="T__StyledText-znbtqz-0 hGCwnP LaunchDetails__CustomT-asn7bn-4 eEceGX"
+            data-testid="details"
+          >
+            &lt;b&gt;Details&lt;/b&gt; {details}
+          </p>
+          <p
+            class="T__StyledText-znbtqz-0 kEJxwM LaunchDetails__LaunchLabelT-asn7bn-5 fPppIn"
+            data-testid="t"
+          >
+            Rocket 
+          </p>
+          <div
+            class="LaunchDetails__RocketBox-asn7bn-3 evPTzi"
+          >
+            <p
+              class="T__StyledText-znbtqz-0 hGCwnP LaunchDetails__CustomT-asn7bn-4 eEceGX"
+              data-testid="rocket-name"
+            >
+              &lt;b&gt;Name&lt;/b&gt; {name}
+            </p>
+            <p
+              class="T__StyledText-znbtqz-0 hGCwnP LaunchDetails__CustomT-asn7bn-4 eEceGX"
+              data-testid="rocket-type"
+            >
+              &lt;b&gt;Type&lt;/b&gt; {type}
+            </p>
+          </div>
+          <p
+            class="T__StyledText-znbtqz-0 kEJxwM LaunchDetails__LaunchLabelT-asn7bn-5 fPppIn"
+            data-testid="t"
+          >
+            Ships 
+          </p>
+          <div
+            class="LaunchDetails__ShipContainer-asn7bn-6 goMvPZ"
+          >
+            <p
+              class="T__StyledText-znbtqz-0 hGCwnP LaunchDetails__CustomT-asn7bn-4 eEceGX"
+              data-testid="ship-name"
+            >
+              &lt;b&gt;Name&lt;/b&gt; {name}
+            </p>
+            <p
+              class="T__StyledText-znbtqz-0 hGCwnP LaunchDetails__CustomT-asn7bn-4 eEceGX"
+              data-testid="ship-type"
+            >
+              &lt;b&gt;Type&lt;/b&gt; {type}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

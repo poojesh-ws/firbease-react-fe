@@ -1,16 +1,35 @@
 # Don't check auto-generated stuff into git
+#------------------------root----------------#
 .history/
-build
-node_modules
-stats.json
-coverage/
+/web/build
+/node_modules
 .vscode/
-switcher_backup.env
-yarn-error.log
-storybook-static
-reports/
 # Cruft
 .DS_Store
-npm-debug.log
+/web/npm-debug.log
 .idea
 .tsconfig-lint.json
+*.log
+coverage/
+report.json
+
+#-----------------web ------------------#
+/web/node_modules
+/web/stats.json
+/web/coverage/
+/web/switcher_backup.env
+/web/yarn-error.log
+/web/storybook-static
+/web/reports/
+/web/report.json
+
+#----------------- functions ---------------#
+/functions/lib/
+
+# TypeScript v1 declaration files
+/functions/typings/
+
+# Node.js dependency directory
+/functions/node_modules/
+
+/functions/*.log
